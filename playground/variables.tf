@@ -7,5 +7,5 @@ variable "ami_id" {
 }
 
 variable "ami_key_pair_name" {
-
+	default = "deployer"
 }

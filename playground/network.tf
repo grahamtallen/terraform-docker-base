@@ -6,3 +6,8 @@ resource "aws_vpc" "test-env" {
     Name = "test-env"
   }
 }
+
+resource "aws_eip" "ip-test-env" {
+	instance = aws_instance.test-ec2-instance.id
+	vpc = true
+}
