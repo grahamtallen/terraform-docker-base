@@ -3,9 +3,9 @@ variable "ami_name" {
 }
 
 variable "ami_id" {
-	default = "ami-07129d59ea7e9e468"
+	default = "ami-06e54d05255faf8f6"
 }
 
 variable "ami_key_pair_name" {
-	default = "deployer"
+	default = "deployer-key"
 }

@@ -1,7 +1,7 @@
 resource "aws_security_group" "ingress-all-test" {
 	name = "allow-all-sg"
 	vpc_id = aws_vpc.test-env.id
-	ingress = {
+	ingress {
 		cidr_blocks = [
 		    "0.0.0.0/0"
 		]
@@ -11,7 +11,7 @@ resource "aws_security_group" "ingress-all-test" {
 		protocol = "tcp"
 	}
 
-	egress = {
+	egress {
 		from_port = 0
 		to_port = 0
 		protocol = "-1"
