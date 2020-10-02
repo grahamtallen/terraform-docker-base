@@ -1,5 +1,5 @@
 data "template_file" "user_data" {
-	template = file("../scripts/add-pubkeys.yml")
+	template = file("../scripts/docker-cloud-init.yml")
 }
 
 resource "aws_instance" "test-ec2-instance" {
