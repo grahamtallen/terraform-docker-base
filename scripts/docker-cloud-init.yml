@@ -24,7 +24,7 @@ users:
 runcmd:
   - sudo su terraform
   - sudo apt-get update  
-  - sudo ./installdocker.sh
+  - sudo ./install-docker.sh
   - usermod -aG docker $USER
   - cd ~
   - docker run hello-world >> dockerinit.txt 2>&1  
