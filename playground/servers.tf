@@ -5,7 +5,11 @@ data "template_file" "user_data" {
 resource "aws_instance" "test-ec2-instance" {
 	ami = var.ami_id
 	instance_type = "t2.micro"
-	security_groups = [aws_security_group.ingress-all-test.id]
+	security_groups = [
+		aws_security_group.ssh.id,
+		aws_security_group.webserver.id
+	]
+
 	subnet_id = aws_subnet.subnet-uno.id
 
 	user_data = data.template_file.user_data.rendered
@@ -13,5 +17,4 @@ resource "aws_instance" "test-ec2-instance" {
 	tags = {
 		Name = var.ami_name
 	}
-
 }

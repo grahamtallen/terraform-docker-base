@@ -1,6 +1,6 @@
-resource "aws_internet_gateway" "test-env-gw" {
-  vpc_id = aws_vpc.test-env.id
+resource "aws_internet_gateway" "main-gw" {
+  vpc_id = aws_vpc.main.id
   tags = {
-    Name = "test-env-gw"
+    Name = "main-gw"
   }
 }
