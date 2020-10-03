@@ -21,10 +21,20 @@ users:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCzWhVqzk1iJLVSWmKAY4fAaWa75WUZyurXiLRNribpdq5I9VrVIHOkXlAPwzZQ/k7VZtEEnGlAw2EnFylR+r9xfltPLbnLhM7EwXGZ3iw4wG4k/g86aQqdWX2211wnsSwCFjqYtRZABmaHgUAyya6RJxU0cZv40dSxT845rd9mJv14/9YTbiWEeo5XGOWuKiWrjHs9th2YffX5B/QOyzo4KdRynP13bZG6ZuyKSk8ZmV0TDdR1NwKopN5xMbkCdYZ7OdscgcXz2It7O7/mRblM4+l5oQP4qAEvBxGutZX+3KHyZz/9QbbQnXsklFgdHXQMzLXNKTf1FvpNjnsKhqSNZ32DUUsyk4HgHf90Ue8DbAfv3nnMiDR0sPsJhBFA9oE8OZ+q+rsyVLSVD8brRL7FULspmcuDbn7WBp7K1S7GuGQE/598mamXAryhzfEt1KtBi0lKm9HfJuhP9lHZ4ZMrRZtcT1pIpmURr9wk7VaF/tMHrzC4t+aXHWoun2VJKn2HIGJbNyyXo25JfMqEsP2CYzhN3MKJ+JVOgFpGQOmdoizPICrbY1qx5PaQ8o8GoRaVOanXK6XOZZubTKcMqy+M2vYqwMJ3rCM2rPZThZ0mZiUR19cvcq3ZSaEhSrOwUKL9HnL1NmyTu6ImPDTN2HWsXGQP+N7zFzyQhZeL68b7Mw== graham.develops@gmail.com
  
 # installs docker
+#apt:
+#  sources:
+#    docker.list: 
+#      source: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE stable"
+
+#packages: 
+#  - docker-ce
+
+    
+    
+# sets up user perms for docker
 runcmd:
   - sudo su terraform
-  - sudo apt-get update  
-  - sudo ./install-docker.sh
-  - usermod -aG docker $USER
-  - cd ~
-  - docker run hello-world >> dockerinit.txt 2>&1  
+  - sudo apt-get update 
+  - apt install docker.io -y
+  - systemctl enable docker
+  - systemctl start docker  
