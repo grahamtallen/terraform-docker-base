@@ -19,12 +19,6 @@ users:
     ssh_import_id:
     lock_passwd: false
     ssh_authorized_keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCzWhVqzk1iJLVSWmKAY4fAaWa75WUZyurXiLRNribpdq5I9VrVIHOkXlAPwzZQ/k7VZtEEnGlAw2EnFylR+r9xfltPLbnLhM7EwXGZ3iw4wG4k/g86aQqdWX2211wnsSwCFjqYtRZABmaHgUAyya6RJxU0cZv40dSxT845rd9mJv14/9YTbiWEeo5XGOWuKiWrjHs9th2YffX5B/QOyzo4KdRynP13bZG6ZuyKSk8ZmV0TDdR1NwKopN5xMbkCdYZ7OdscgcXz2It7O7/mRblM4+l5oQP4qAEvBxGutZX+3KHyZz/9QbbQnXsklFgdHXQMzLXNKTf1FvpNjnsKhqSNZ32DUUsyk4HgHf90Ue8DbAfv3nnMiDR0sPsJhBFA9oE8OZ+q+rsyVLSVD8brRL7FULspmcuDbn7WBp7K1S7GuGQE/598mamXAryhzfEt1KtBi0lKm9HfJuhP9lHZ4ZMrRZtcT1pIpmURr9wk7VaF/tMHrzC4t+aXHWoun2VJKn2HIGJbNyyXo25JfMqEsP2CYzhN3MKJ+JVOgFpGQOmdoizPICrbY1qx5PaQ8o8GoRaVOanXK6XOZZubTKcMqy+M2vYqwMJ3rCM2rPZThZ0mZiUR19cvcq3ZSaEhSrOwUKL9HnL1NmyTu6ImPDTN2HWsXGQP+N7zFzyQhZeL68b7Mw== graham.develops@gmail.com
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZI1v5I9bClvs9yLFn+KdevjXVswd7NQ+D6kDkazeBG8h1PsFxSiQ7gvrgmvlpAVeGAm9UjmSZ2pgIf3sWyLycj08zp5FvzCPaoxFZ8A0GC7Ji4xPeqId9u7PLntMlAbaSC4YE4tjoF0Ia4Q3mstMAqp+Qaaz3/+X0SZH7VRATT8mBZ7dOMtuw1fdSXy4Kd0o/nKpy8X2xDzwMuv8OnfBdOVR2ncFfeS9UsQAJtEEa+ftQfMTkfXKtcjSPCSaTimyc+oKPQRdmrnkbZ19yfzdXWoEY18OpR/P2VwFRWzjXanfEXFZCIH3/zQTyxiUSfA2ozNzI+YWWf6vg9V3iuPa9 grahamallen@Grahams-MacBook-Pro.local 
 
-#cloud-config
-runcmd:
-  - sudo su terraform
-  - sudo apt-get update 
-  - sudo apt-get install docker.io
-  - sudo systemctl start docker
 
